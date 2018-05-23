@@ -12,11 +12,11 @@ const styles = StyleSheet.create({
     paddingTop: 8,
     fontSize: 20,
     fontWeight: 'bold',
-    fontFamily: 'Cochin',
+    fontFamily: 'Helvetica',
   },
 })
 
-export default class Title extends Component {
+export default class Header extends Component {
 
   render() {
     const {children} = this.props

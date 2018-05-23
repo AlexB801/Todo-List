@@ -1,31 +1,26 @@
 import React, { Component, PropTypes } from 'react'
-import { View, ScrollView, StyleSheet, TextInput, Text } from 'react-native'
-// import { connect } from 'react-redux'
-
-// import { actionCreators } from '../redux/todoRedux'
-import Title from './app/components/Title.js'
+import { View, Text, StyleSheet } from 'react-native'
+import Header from './Header.js'
+import Footer from './Footer.js'
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-})
-
-const mapStateToProps = (state) => ({
-  items: state.items,
+  divider: {
+    height: 1,
+    backgroundColor: 'whitesmoke',
+  },
 })
 
 class App extends Component {
-
-  // static propTypes = {
-  //   items: PropTypes.array.isRequired,
-  //   dispatch: PropTypes.func.isRequired,
-  // }
-
   render() {
+    const {items} = this.props
+
     return (
       <View style={styles.container}>
-        <Title> Todo List </Title>
+        <Header>Todo List</Header>
+        <Footer onRemoveCompleted={this.removeCompleted} />
       </View>
     )
   }
