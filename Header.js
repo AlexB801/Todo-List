@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   },
 })
 
-export default class Header extends Component {
+class Header extends Component {
 
   render() {
     const {children} = this.props
@@ -28,3 +28,5 @@ export default class Header extends Component {
     )
   }
 }
+
+export default Header;

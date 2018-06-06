@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   },
 })
 
-export default class Footer extends Component {
+class Footer extends Component {
 
 
   render() {
@@ -24,3 +24,5 @@ export default class Footer extends Component {
     )
   }
 }
+
+export default Footer;

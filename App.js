@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import { View, Text, StyleSheet, Platform } from 'react-native'
-import Header from './Header.js'
-import Footer from './Footer.js'
-// import Input from './Input.js'
+import Header from './Header'
+import Footer from './Footer'
+import Input from './Input'
 
 const styles = StyleSheet.create({
   container: {
@@ -10,6 +10,10 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
+  },
+  divider: {
+    height: 1,
+    backgroundColor: 'lightgrey',
   }
 })
 
@@ -21,12 +25,13 @@ class App extends Component {
       <View style={styles.container}>
         <Header>Todo List</Header>
         <View style={styles.content}>
-
+        <Input />
         </View>
+        <View style={styles.divider} />
         <Footer onRemoveCompleted={this.removeCompleted} />
       </View>
     )
   }
 }
 
- export default App;
+export default App;
